@@ -1,0 +1,75 @@
+<style>
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 1rem 0;
+    }
+
+    .project-card {
+        background-color: var(--card-bg);
+        border-radius: 1rem;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid var(--border-color);
+    }
+
+    .project-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    .project-content {
+        padding: 1.5rem;
+    }
+
+    .project-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: var(--accent-color);
+    }
+
+    .project-description {
+        color: var(--text-color);
+        opacity: 0.9;
+        margin-bottom: 1.5rem;
+    }
+
+    .project-link {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background-color: var(--accent-color);
+        color: white;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+    .project-link:hover {
+        background-color: var(--accent-hover);
+        color: white;
+    }
+</style>
+
+<main>
+    <div class="container">
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-content">
+                    <h3 class="project-title">Проект 1 - Telegraph</h3>
+                    <p class="project-description">Первый проект по серверному программированию, который реализует в себе полную копию приложения "Telegram".</p>
+                    <a href="#" class="project-link">Открыть проект</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-content">
+                    <h3 class="project-title">Проект 2 - Laravel</h3>
+                    <p class="project-description">Второй проект по серверному программированию веб-изданий на Laravel.</p>
+                    <a href="#" class="project-link">Открыть проект</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

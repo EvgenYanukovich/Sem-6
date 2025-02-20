@@ -1,24 +1,16 @@
-# Лабораторная работа №2
-# Вариант 14
-# Выполнил: Янукович Евгений Дмитриевич
-
 def find_product_numbers(N):
-    """Находит все числа от 1 до N, являющиеся произведением двух чисел, меньших N"""
-    results = set()  # Используем множество для исключения дубликатов
+    results = set() 
     
-    # Внешний цикл для первого множителя
     for i in range(1, N):
-        # Внутренний цикл для второго множителя
-        for j in range(i, N):  # Начинаем с i, чтобы избежать лишних проверок
+        for j in range(i, N):  
             product = i * j
             if product <= N:
                 results.add(product)
             else:
-                break  # Если произведение превысило N, переходим к следующему i
+                break  
                 
-    return sorted(list(results))  # Преобразуем в отсортированный список
+    return sorted(list(results))  
 
-# Получение числа N от пользователя
 print("Введите число N:")
 try:
     N = int(input())
@@ -29,8 +21,6 @@ try:
         numbers = find_product_numbers(N)
         if numbers:
             print(f"\nЧисла от 1 до {N}, являющиеся произведением двух чисел, меньших {N}:")
-            
-            # Выводим числа и их множители
             for num in numbers:
                 factors = []
                 print(f"\n{num} можно получить как произведение:")
